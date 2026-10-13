@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* 
+  CHANGED COLOR TOKENS:
+  --bg-page: #F6F0EA;
+  --bg-card: #FCF9F6;
+  --border-warm: #D8CCC0;
+  --text-soot: #1C1512;
+  --text-muted: #6B5D54;
+  --color-critical: #C42B12;
+  --color-warning: #D9650F;
+  --color-elevated: #A8541A;
+  --color-normal: #4A403A;
+  --color-offline: #9A8F86;
+  --panel-soot: #2A1B15;
+  --text-ash: #F3E9DF;
+  --wash-ember: #FBE9E3;
+  --dark-bg: #1A110D;
+*/
+
+:root {
+  --bg-page: #F6F0EA;
+  --bg-card: #FCF9F6;
+  --border-warm: #D8CCC0;
+  --text-soot: #1C1512;
+  --text-muted: #6B5D54;
+  --color-critical: #C42B12;
+  --color-warning: #D9650F;
+  --color-elevated: #A8541A;
+  --color-normal: #4A403A;
+  --color-offline: #9A8F86;
+  --panel-soot: #2A1B15;
+  --text-ash: #F3E9DF;
+  --wash-ember: #FBE9E3;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-soot);
+  position: relative;
+}
+
+/* Subtle ash-grain texture using CSS only */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+code, pre, .font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
